@@ -1,0 +1,60 @@
+pragma once
+#include <iostream>
+#include <dirent.h>
+#include <direct.h>
+#include <string>
+#include <fstream>
+#include "Huffman.hpp"
+
+class DirectoryTree
+{
+private:
+	struct DirTree
+	{
+		std::string name;
+		int numberOfFolders;
+		int numberOfFiles;
+		DirTree** folders;
+		std::string* files;
+
+		DirTree()
+		{
+			name = "";
+			numberOfFolders = 0;
+			numberOfFiles = 0;
+			folders = nullptr;
+			files = nullptr;
+		}
+
+		DirTree(std::string name, int fold=0, int file=0, DirTree** folders = nullptr, std::string* fils = nullptr)
+		{
+			this->name = name;
+			this->numberOfFolders = fold;
+			this->numberOfFiles = file;
+			this->folders = folders;
+			this->files = fils;
+		}
+
+		void CopyTree(DirTree*& newTree,DirTree*& toCopy)
+		{
+			if (toCopy == nullptr)
+			{
+				newTree = nullptr;
+				return;
+			}
+
+			newTree = new DirTree(toCopy->name, toCopy->numberOfFolders, toCopy->numberOfFiles);
+			newTree->files = new std::string[numberOfFiles];
+			for (int i = 0; i < numberOfFiles; i++)
+			{
+				newTree->files[i] = toCopy->files[i];
+			}
+
+			newTree->folders = new DirTree*[numberOfFolders];
+			for (int i = 0; i < numberOfFolders; i++)
+			{
+				newTree->folders[i] = new DirTree();
+				CopyTree(newTree->folders[i], toCopy->folders[i]);
+			}
+
+		}
