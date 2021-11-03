@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <title>Best website</title>
+    <style>
+        body {
+            background-color: #17295fa9;
+        }
+        
+        #wrapper {
+            width: 400px;
+            background-color: rgb(121, 48, 48);
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 10px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <section>
+            <img src="avatar.png" alt="this avatar" width="70">
+            <p>Manol Milev <br>
+                <b>Администратор </b>
+                <img src="diamond.png" alt="this diamand" width="15" height="15"> 16 Октомври в 14:34<br>
+            </p>
+            <hr>
+        </section>
+        <article>
+            <h1>Упражнение в неделя</h1>
+            <p>Ще имаме упражнение в <b>Неделя 24.10.2021.</b> То ще се проведе <b>онлайн.</b> Темата ще е <b>HTML.</b> За провеждането му ще са ви нужни:<br></p>
+            <ul>
+                <li>Интернет връзка</li>
+                <li>Компютър</li>
+                <li>Клавиатура</li>
+                <li>Нов лектор</li>
+            </ul>
+            <p>
+                <img src="thumbs-up.png" alt="thumb1" width="12" height="12">
+                <a href="https://www.facebook.com/groups/377665870568041">Виж истинския пост във фейсбук<br></a>
+                <hr>
+        </article>
+        <Paragraph>
+            <button type="button1"> <img src ="thumbs-up.png" alt = "thumb2" width = "12" height = "12"> Харесай</button>
+            <button type="button2"> <img src ="comments.png" alt = "this comment" width = "20" height = "12"> Коментирай</button>
+            <hr class="solid">
+        </Paragraph>
+
+        <footer>
+            <h2>Коментари<br></h2>
+            <ol>
+                <li>Иван Иванов: <b>Много яко!</b></li>
+                <li>Гошо от почивка: <b>Трябва ли ми ваксина за да присъствам онлайн?</b></li>
+            </ol>
+            <button type="button3"> Изпрати</button>
+
+        </footer>
+    </div>
+</body>
+
+</html>
